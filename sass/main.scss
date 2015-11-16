@@ -1,7 +1,6 @@
 body {
    background-color: navajowhite;
    padding-top: 70px; 
-
 }
 
 #logo {
@@ -10,6 +9,8 @@ body {
 	margin: 0;
 	padding: 0 0 0 0;
 }
+
+
 h1 {
   text-align: center;
   color: purple;
@@ -17,6 +18,8 @@ h1 {
 
 .main-page-container{
 padding: 0 15px 0 15px;
+}
 
-
+.main-page-container{
+transition: display 1.5s;
 }

@@ -15,4 +15,7 @@ h1 {
 .main-page-container {
   padding: 0 15px 0 15px; }
 
+.main-page-container {
+  transition: display 1.5s; }
+
 /*# sourceMappingURL=main.css.map */
