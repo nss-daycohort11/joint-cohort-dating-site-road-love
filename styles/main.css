@@ -1,37 +1,25 @@
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 28 of ../sass/main.scss
+body {
+  background-color: navajowhite;
+  padding-top: 70px; }
 
-23:   border-color: #2d5073;
-24:   background-color: #3b5998;
-25:   background-image: url(http://i.stack.imgur.com/pZzc4.png);
-26:   height: 100px;
-27:   width: 100px; 
-28: }
+#logo {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 0 0 0; }
 
-Backtrace:
-../sass/main.scss:28
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:1163:in `expected'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:1092:in `tok!'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:639:in `block'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:632:in `ruleset'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:656:in `block_child'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:117:in `stylesheet'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:42:in `parse'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/engine.rb:403:in `_to_tree'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:19:in `load'
-/usr/local/bin/sass:19:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 28 of ../sass/main.scss\A \A 23:   border-color: #2d5073;\A 24:   background-color: #3b5998;\A 25:   background-image: url(http://i.stack.imgur.com/pZzc4.png);\A 26:   height: 100px;\A 27:   width: 100px; \A 28: }"; }
+h1 {
+  text-align: center;
+  color: purple; }
+
+.main-page-container {
+  transition: display 1.5s; }
+
+button#facebook {
+  border-color: #2d5073;
+  background-color: #3b5998;
+  background-image: url(http://i.stack.imgur.com/pZzc4.png);
+  height: 100px;
+  width: 100px; }
+
+/*# sourceMappingURL=main.css.map */

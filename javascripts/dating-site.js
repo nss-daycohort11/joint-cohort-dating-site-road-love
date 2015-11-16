@@ -21,8 +21,8 @@ require(
   function(dependencies, login, addFavorite) {
 
      // Import Firebase user object
-
-var myFirebaseRef = new Firebase("https://https://roadlove.firebaseio.com/");
+var importUserArray = [];
+var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
     
      // Take snapshot of firebase object
   myFirebaseRef.child("users").on("value", function(snapshot) {
@@ -35,6 +35,7 @@ var myFirebaseRef = new Firebase("https://https://roadlove.firebaseio.com/");
             userWithId.key = key;
             importUserArray[importUserArray.length] = userWithId;
           };
+          console.log("importUserArray", importUserArray);
     
      // Prep object to be passed into hbs in case of edits
     allUsersObject = { users: importSongsArray };
@@ -65,5 +66,5 @@ var myFirebaseRef = new Firebase("https://https://roadlove.firebaseio.com/");
 
 
     
-  }
-);
+  });
+})
