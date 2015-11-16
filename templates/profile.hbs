@@ -1,0 +1,28 @@
+{{#each users}}
+
+  <div class=row>
+    <div class= col-md-5>
+      <div>
+        {{image}}
+      </div>
+    </div>
+    <div class= col-md-4>
+      <div>
+        Name: {{name}}
+      </div>
+      <div>
+        Age: {{age}}
+      </div>
+      <div>
+        Gender: {{gender}}
+      <div>
+        Bio: {{bio}}
+      <div>
+        Location: {{homelocation.city}}, {{homelocation.state}}
+      </div>
+      <div>
+        RV: {{rv}}
+      </div>
+    </div>  
+  </div>
+{{/each}}

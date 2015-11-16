@@ -1,0 +1,61 @@
+{
+  "users" : [
+      {
+      "Preferences" : {
+        "maxage" : "80",
+        "minage" : "25",
+        "seeking" : "female"
+      },
+      "age" : "72",
+      "bio" : "My name is Joe, and I like to RV!",
+      "favorites" : "user3",
+      "user_name" : "Joe Smith",
+      "homelocation" : {
+        "city" : "Nashville",
+        "state" : "Tennessee"
+      },
+      "likes" : "user2",
+      "rv" : "Renegade Explorer",
+      "gender" : "male",
+      "zip" : "37127"
+    },
+    {
+      "Preferences" : {
+        "maxage" : "80",
+        "minage" : "25",
+        "seeking" : "male"
+      },
+      "age" : "57",
+      "bio" : "My name is Suzie, and I like to RV!",
+      "favorites" : "user1",
+      "user_name" : "Suzie Connor",
+      "homelocation" : {
+        "city" : "Las Vegas",
+        "state" : "Nevada"
+      },
+      "likes" : "user1",
+      "rv" : "Renegade Expedition",
+      "gender" : "female",
+      "zip" : "82624"
+    },
+    {
+      "Preferences" : {
+        "maxage" : "80",
+        "minage" : "25",
+        "seeking" : "male"
+      },
+      "age" : "72",
+      "bio" : "My name is Kate, and I like to RV!",
+      "favorites" : "user1",
+      "user_name" : "Kate Brown",
+      "homelocation" : {
+        "city" : "Louisville",
+        "state" : "Kentucky"
+      },
+      "likes" : "user1",
+      "rv" : "RV Explorer",
+      "gender" : "male",
+      "zip" : "32949"
+    }
+  ]
+}
