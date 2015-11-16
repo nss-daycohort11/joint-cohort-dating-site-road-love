@@ -5,16 +5,20 @@ require.config({
     'lodash': '../lib/bower_components/lodash/lodash.min',
     'hbs': '../lib/bower_components/require-handlebars-plugin/hbs',
     'q': '../lib/bower_components/q/q',
+    'firebase': '../lib/bower_components/firebase/firebase',
     'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min'
   },
   shim: {
-    'bootstrap': ['jquery']
+    'bootstrap': ['jquery'],
+    'firebase': {
+      exports: 'Firebase'
+    }
   }
 });
 
 require(
-  ["dependencies"], 
-  function(_$_) {
+  ["dependencies", "firebase", "login", "add-favorite"], 
+  function(dependencies, login, addFavorite) {
 
      // Import Firebase user object
 

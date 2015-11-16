@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
   background-color: navajowhite;
   padding-top: 70px; }
 
@@ -7,15 +8,27 @@ body {
   left: 0;
   margin: 0;
   padding: 0 0 0 0; }
+=======
+  background-color: pink; }
+>>>>>>> eb3314cbe2009ccb09c922f0644e6c75cbda7d59
 
 h1 {
   text-align: center;
   color: purple; }
 
+<<<<<<< HEAD
 .main-page-container {
   padding: 0 15px 0 15px; }
 
 .main-page-container {
   transition: display 1.5s; }
+=======
+button#facebook {
+  border-color: #2d5073;
+  background-color: #3b5998;
+  background-image: url(http://i.stack.imgur.com/pZzc4.png);
+  height: 100px;
+  width: 100px; }
+>>>>>>> eb3314cbe2009ccb09c922f0644e6c75cbda7d59
 
 /*# sourceMappingURL=main.css.map */
