@@ -1,9 +1,19 @@
 body {
-  background-color: pink; }
+  background-color: navajowhite;
+  padding-top: 70px; }
+
+#logo {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 0 0 0; }
 
 h1 {
   text-align: center;
   color: purple; }
+
+.main-page-container {
+  padding: 0 15px 0 15px; }
 
 button#facebook {
   border-color: #2d5073;
@@ -11,5 +21,8 @@ button#facebook {
   background-image: url(http://i.stack.imgur.com/pZzc4.png);
   height: 100px;
   width: 100px; }
+
+.hidemoreinfo {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */

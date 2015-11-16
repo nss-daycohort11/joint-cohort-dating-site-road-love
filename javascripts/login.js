@@ -16,14 +16,17 @@ $("#facebook").click(function() {
 	    console.log("Authenticated successfully with payload:", authData);
 	    console.log(authData.facebook.displayName);
 	    var userName = authData.facebook.displayName;
+	    var userImage = authData.facebook.profileImageURL;
 	    var userObject = {
 	    	
-	    	"user_name":userName
-	    	
+	    	"user_name":userName,
+	    	"user_image": userImage
+
   		};
   		console.log("userObject", userObject);
   		adduser(userObject)
   			.then(function(addedUser) {
+  				$('.show').remove();
   				console.log("success");
   			})
   			.fail(function(error) {	
