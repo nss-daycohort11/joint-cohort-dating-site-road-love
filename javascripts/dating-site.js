@@ -19,9 +19,11 @@ require(
      // Import Firebase user object
 
 var myFirebaseRef = new Firebase("https://https://roadlove.firebaseio.com/");
+    
      // Take snapshot of firebase object
   myFirebaseRef.child("users").on("value", function(snapshot) {
     var users = snapshot.val();
+    
      // Create array of objects
     importUserArray = [];
         for (var key in users) {
@@ -29,10 +31,13 @@ var myFirebaseRef = new Firebase("https://https://roadlove.firebaseio.com/");
             userWithId.key = key;
             importUserArray[importUserArray.length] = userWithId;
           };
+    
      // Prep object to be passed into hbs in case of edits
     allUsersObject = { users: importSongsArray };
+    
     // Create copy of original array for click back to main screen.
     originalUserArray = importUserArray.slice();
+    
      // Create variable to store "modifiedUserObject"
 
      // Create editted JSON file
