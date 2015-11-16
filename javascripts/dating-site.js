@@ -16,14 +16,50 @@ require(
   ["dependencies"], 
   function(_$_) {
 
-    /*
-      You can choose to use the REST methods to interact with
-      Firebase, or you can use the Firebase API with event
-      listeners. It's completely up to each team.
+     // Import Firebase user object
 
-      If you choose the former, I created two boilerplate modules
-      named `potential-mates.js`, and `add-favorite.js`.
-     */
+var myFirebaseRef = new Firebase("https://https://roadlove.firebaseio.com/");
+    
+     // Take snapshot of firebase object
+  myFirebaseRef.child("users").on("value", function(snapshot) {
+    var users = snapshot.val();
+    
+     // Create array of objects
+    importUserArray = [];
+        for (var key in users) {
+            var userWithId = users[key];
+            userWithId.key = key;
+            importUserArray[importUserArray.length] = userWithId;
+          };
+    
+     // Prep object to be passed into hbs in case of edits
+    allUsersObject = { users: importSongsArray };
+    
+    // Create copy of original array for click back to main screen.
+    originalUserArray = importUserArray.slice();
+    
+     // Create variable to store "modifiedUserObject"
+
+     // Create editted JSON file
+
+     // Flash update back to Firebase
+
+
+
+
+
+
+  
+
+
+
+
+       
+
+
+
+
+
     
   }
 );
