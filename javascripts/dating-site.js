@@ -16,14 +16,48 @@ require(
   ["dependencies"], 
   function(_$_) {
 
-    /*
-      You can choose to use the REST methods to interact with
-      Firebase, or you can use the Firebase API with event
-      listeners. It's completely up to each team.
+     // Import Firebase user object
 
-      If you choose the former, I created two boilerplate modules
-      named `potential-mates.js`, and `add-favorite.js`.
-     */
+     // Take snapshot of firebase object
+
+     // Create array of objects
+
+     // Prep object to be passed into hbs in case of edits
+
+     // Create variable to store "modifiedUserObject"
+
+     // Create editted JSON file
+
+     // Flash update back to Firebase
+
+   // Event Handlers
+
+       
+       function myProfileView (){
+          $("#main-page").hide();
+          $("#my-profile").show();
+          $("#other-profile").hide();        
+           }
+       function otherProfileView (){
+          $("#main-page").hide();
+          $("#my-profile").hide();
+          $("#other-profile").show();        
+       }
+
+       $("#profile-edit").click(myProfileView);
+       $(".others-profile").click(otherProfileView);      
+
+
+
+
+       // Like Potential
+       // Favorite Potential
+
+
+
+
+
+
     
   }
 );
