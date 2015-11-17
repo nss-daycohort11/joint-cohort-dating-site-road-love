@@ -8,17 +8,20 @@ define(function(require) {
   var auth = require("auth-storage");
   var userName, userImage;
   var userObject = {};
-
-
   var auth = require("auth-storage");
   
   console.log("yep");
+
+
 
   $("#facebook").click(function() {
     console.log("click");
     var ref = new Firebase("https://roadlove.firebaseio.com/");
     ref.authWithOAuthPopup("facebook", function(error, authData) {
-      if (error) {
+      if(authData){
+        auth.getUid();
+      }
+      else if (error) {
         console.log("Login Failed!", error);
       } else {
         console.log("Authenticated successfully with payload:", authData);
@@ -34,33 +37,50 @@ define(function(require) {
           "user_uid": userId
 
         };
+      }
+
+    })
+      ref.child("users").on("value", function(snapshot) {
+      var users = snapshot.val();
+      console.log("users", users);
+
         var userAuth = ref.getAuth();
         var usersArray = [];
-        for (var key in ref) {
-          var userObj = ref[key];
+        for (var key in users) {
+          var userObj = users[key];
+          // console.log("userObj", userObj);
           userObj.key = key;
-          usersArray[usersArray.length] = userObj;
+          // console.log("key", userObj.key);
+          usersArray[usersArray.length] =  userObj;
+        console.log("userObj", userObj);
+        console.log("userObj.user_uid", userObj.user_uid);
+            console.log("userAuth.uid", userAuth.uid);
+
+
           if(userObj.user_uid === userAuth.uid){
-            break;
+            console.log("userObj.user_uid", userObj.user_uid);
+            console.log("userAuth.uid", userAuth.uid);
             console.log("user exists");
             auth.setKey(key);
           }
-        };
-        console.log("userObject", userObject);
-        adduser(userObject)
-          .then(function(addedUser) {
-            $('.show').remove();
-            console.log("success");
-            $('#myModal').modal('show');
-          })
-          .fail(function(error) { 
-            console.log("It errored out", error);
-        });
-      }
-    }
-  );
+          else{
+            console.log("user does not exist");
+          }
+        }       
+          console.log("userObject", userObject);
+          adduser(userObject)
+            .then(function(addedUser) {
+              $('.show').remove();
+              console.log("success");
+              $('#myModal').modal('show');
+            })
+            .fail(function(error) { 
+              console.log("It errored out", error);
+           });
+     });
+  });
 });
-});
+
  
 
 

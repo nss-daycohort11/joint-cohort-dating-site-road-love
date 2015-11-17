@@ -27,10 +27,11 @@ define(function(require) {
           userObj.likes = likes;
           usersArray[usersArray.length] = userObj;
           if(userObj.user_uid === userAuth.uid){
-            console.log("user exists");
+            console.log("userObj.user_uid", userObj.user_uid)
+            // console.log("user exists");
             auth.setKey(key);
           }else{
-            console.log("User does not exist");
+            // console.log("User does not exist");
           }
         }
           likesRef.on('value', function (snapshot) {
