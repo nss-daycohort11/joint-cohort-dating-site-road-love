@@ -38,7 +38,7 @@ var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
           console.log("importUserArray", importUserArray);
     
      // Prep object to be passed into hbs in case of edits
-    allUsersObject = { users: importSongsArray };
+    allUsersObject = { users: importUserArray };
     
     // Create copy of original array for click back to main screen.
     originalUserArray = importUserArray.slice();
@@ -48,23 +48,5 @@ var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
      // Create editted JSON file
 
      // Flash update back to Firebase
-
-
-
-
-
-
-  
-
-
-
-
-       
-
-
-
-
-
-    
-  });
-})
+});
+});

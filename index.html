@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
 <header>
 	<nav class="navbar-fixed-top navbar navbar-default">
   <div class="container-fluid">
@@ -107,6 +106,61 @@
 
 
   
+=======
+
+<div id="main-page">
+	<div class="row main-page-container">
+	  <div class="col-md-2">.col-md-2</div>
+	  <div class="col-md-2">.col-md-2</div>
+	  <div class="col-md-2">.col-md-2</div>
+	  <div class="col-md-2">.col-md-2</div>
+	  <div class="col-md-2">.col-md-2</div>
+	  <div class="col-md-2">.col-md-2</div>
+	</div>
+</div>
+<div class="profile" id="my-profile" style="display:none">
+	<div class="row">
+	  <div class="col-md-5">.col-md-5</div>
+	  <div class="col-md-4">.col-md-4</div>
+	  <div class="col-md-3">.col-md-3</div>
+	</div>
+</div>
+<div class="profile" id="other-profile" style="display:none">
+	<div class="row">
+	  <div class="col-md-5">.col-md-5</div>
+	  <div class="col-md-4">.col-md-4</div>
+	  <div class="col-md-3">.col-md-3</div>
+	</div>
+</div>
+</header>
+<div class="modal show" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h5 class="modal-title" id="myModalLabel">Log-In or Sign-Up</h5>
+        <button id="facebook"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="moreinfo" class="hidemoreinfo">
+	<h1>Please give us some additional information!!</h1>
+	<input type="text" id="age" >What is your current age?</input>
+	<input type="text" id="state" >Where is your home state?</input>
+	<input type="text" id="city" >What is your home city?</input>
+	<input type="text" id="age" >What is your home zipcode?</input>
+	<input type="text" id="age" >What is your current RV?</input>
+	<p>Please select your sex.</p>
+	<select>
+		<option value="female">Female</option>
+		<option value="male">Male</option>
+	</select>	
+	<input type="text" id="age" >Tell the other users a little more about yourself!!!</input>
+
+	
+</div>
+
   <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
 
 </body>
