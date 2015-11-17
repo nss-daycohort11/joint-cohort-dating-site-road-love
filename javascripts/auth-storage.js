@@ -16,7 +16,7 @@ define(function(require){
     },
     setKey: function(newKey){
       console.log("setting user id to ", newKey);
-      ukey = newkey;
+      uKey = newKey;
     }
   };
 });

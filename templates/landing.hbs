@@ -1,5 +1,5 @@
 {{#each users}}
-    <div class= "col-md-2 image-container" id={{key}}>
+    <div class= "col-md-2 image-container" >
       <div>
         <img alt="user image"src="{{user_image}}">
       </div>
@@ -11,6 +11,9 @@
       </div>
       <div class="geo-box">
       {{homelocation.city}}, {{homelocation.state}}
+      </div>
+      <div>
+      <button class="like" id="like" value={{key}}>Like</button>
       </div>
     </div>
 {{/each}}

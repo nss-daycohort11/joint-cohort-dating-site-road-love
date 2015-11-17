@@ -4,7 +4,7 @@ define(function(require) {
   var auth = require("auth-storage");
 
 
-  var usersRef = new Firebase("https://roadlove.firebaseio.com/users");
+  var usersRef = new Firebase("https://roadlove.firebaseio.com/users/");
   var userAuth = usersRef.getAuth();
     console.log("userAuth", userAuth);
 
@@ -28,22 +28,29 @@ define(function(require) {
           usersArray[usersArray.length] = userObj;
           if(userObj.user_uid === userAuth.uid){
             console.log("user exists");
-            auth.setUid(key);
+            auth.setKey(key);
           }else{
             console.log("User does not exist");
           }
         }
-               likesRef.on('value', function (snapshot) {
+          likesRef.on('value', function (snapshot) {
             var usersLikes = snapshot.val();
             console.log("usersLikes", usersLikes);
           });    
     });
+    var likedKey = {};
 
-  $(document).on('click', '#like', function(likeUserData){
+    console.log("hello there");
+
+  $(document).on('click', '.like', function(){
+    var userRefKey = auth.getKey();
     console.log("like click");
-      usersRef.child(userKey + "/likes/").push(likeUserData = true);
-    });
-
+    var likes = {};
+    likes[$(this).val()] = true;
+    console.log(likes);
+      usersRef.child(userRefKey + "/likes").update(likes);
+    })
+    
  });
 
 

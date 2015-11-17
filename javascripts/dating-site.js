@@ -24,6 +24,7 @@ require(
      // Import Firebase user object
 var importUserArray = [];
 var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
+var userAuth = myFirebaseRef.getAuth();
     
      // Take snapshot of firebase object
   myFirebaseRef.child("users").once("value", function(snapshot) {
@@ -36,7 +37,11 @@ var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
             var userWithId = users[key];
             userWithId.key = key;
             importUserArray[importUserArray.length] = userWithId;
-
+            if(userWithId.user_uid === userAuth.uid){
+            console.log("user exists");
+            auth.setKey(key);
+            var friendKey = auth.getKey();
+          }
             // console.log("userWithId", userWithId);
           }
           console.log("importUserArray", importUserArray);

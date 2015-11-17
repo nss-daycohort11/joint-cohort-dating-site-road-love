@@ -5,9 +5,9 @@ define(function(require) {
   var f = require("firebase");
   var adduser = require("adduser");
   var _ = require("lodash");
-var auth = require("auth-storage");
-var userName, userImage;
-var userObject = {};
+  var auth = require("auth-storage");
+  var userName, userImage;
+  var userObject = {};
 
 
   var auth = require("auth-storage");
@@ -41,21 +41,24 @@ var userObject = {};
           userObj.key = key;
           usersArray[usersArray.length] = userObj;
           if(userObj.user_uid === userAuth.uid){
+            break;
             console.log("user exists");
             auth.setKey(key);
           }
+        };
         console.log("userObject", userObject);
         adduser(userObject)
           .then(function(addedUser) {
             $('.show').remove();
             console.log("success");
+            $('#myModal').modal('show');
           })
           .fail(function(error) { 
             console.log("It errored out", error);
         });
       }
     }
-  });
+  );
 });
 });
  
