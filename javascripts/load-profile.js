@@ -24,7 +24,7 @@ define(function (require){
       var populatedTemplate = templates.profileTmpl({ users: arrayOfObjects });
 
       //Insert the DOM into the proper element
-      $("#user-profile").html(populatedTemplate);
+      $("#my-profile").html(populatedTemplate);
       
     });  
 });

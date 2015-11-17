@@ -17,15 +17,15 @@ require.config({
 });
 
 require(
-  ["dependencies", "firebase", "login", "add-favorite"], 
-  function(dependencies, login, addFavorite) {
+  ["dependencies", "firebase", "login", "add-favorite", "get-templates", "load-profile"], 
+  function(dependencies, firebase,login, addFavorite, templates, profile) {
 
      // Import Firebase user object
 var importUserArray = [];
 var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
     
      // Take snapshot of firebase object
-  myFirebaseRef.child("users").on("value", function(snapshot) {
+  myFirebaseRef.child("users").once("value", function(snapshot) {
     var users = snapshot.val();
     
      // Create array of objects
@@ -34,14 +34,21 @@ var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
             var userWithId = users[key];
             userWithId.key = key;
             importUserArray[importUserArray.length] = userWithId;
-          };
+          }
           console.log("importUserArray", importUserArray);
     
-     // Prep object to be passed into hbs in case of edits
-    allUsersObject = { users: importUserArray };
+     // Pass to HBS
+    var readyTemplate = templates.landingTmpl({ users: importUserArray });
     
+    $(".grid").html(readyTemplate);
+    
+
+
+
+
+
     // Create copy of original array for click back to main screen.
-    originalUserArray = importUserArray.slice();
+    // originalUserArray = importUserArray.slice();
     
      // Create variable to store "modifiedUserObject"
 

@@ -7,33 +7,33 @@ define(function(require) {
   var adduser = require("adduser")
 
  userObject={};
-$("button#facebook").click(function() {
-	console.log("click");
-	var ref = new Firebase("https://roadlove.firebaseio.com/");
-	ref.authWithOAuthPopup("facebook", function(error, authData) {
-	  if (error) {
-	    console.log("Login Failed!", error);
-	  } else {
-	    console.log("Authenticated successfully with payload:", authData);
-	    console.log(authData.facebook.displayName);
-	    var userName = authData.facebook.displayName;
-	    var userImage = authData.facebook.profileImageURL;
-	    userObject = {
+// $("button#facebook").click(function() {
+// 	console.log("click");
+// 	var ref = new Firebase("https://roadlove.firebaseio.com/");
+// 	ref.authWithOAuthPopup("facebook", function(error, authData) {
+// 	  if (error) {
+// 	    console.log("Login Failed!", error);
+// 	  } else {
+// 	    console.log("Authenticated successfully with payload:", authData);
+// 	    console.log(authData.facebook.displayName);
+// 	    var userName = authData.facebook.displayName;
+// 	    var userImage = authData.facebook.profileImageURL;
+// 	    userObject = {
 	    	
-	    	"user_name":userName,
-	    	"user_image": userImage
+// 	    	"user_name":userName,
+// 	    	"user_image": userImage
 
-  		};
-  		console.log("userObject", userObject);
-  		adduser(userObject)
-  			.then(function(addedUser) {
-  				$('.show').remove();
-  				console.log("success");
-  			})
-  			.fail(function(error) {	
-	    		console.log("It errored out", error);
-	    });
-	}
-});
-});
+//   		};
+//   		console.log("userObject", userObject);
+//   		adduser(userObject)
+//   			.then(function(addedUser) {
+//   				$('.show').remove();
+//   				console.log("success");
+//   			})
+//   			.fail(function(error) {	
+// 	    		console.log("It errored out", error);
+// 	    });
+// 	}
+// });
+// });
 });
