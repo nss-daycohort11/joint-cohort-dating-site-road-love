@@ -5,9 +5,9 @@ define(function(require) {
   var f = require("firebase");
 
   var adduser = require("adduser")
-console.log("yep");
 
-$("#facebook").click(function() {
+ userObject={};
+$("button#facebook").click(function() {
 	console.log("click");
 	var ref = new Firebase("https://roadlove.firebaseio.com/");
 	ref.authWithOAuthPopup("facebook", function(error, authData) {
@@ -18,7 +18,7 @@ $("#facebook").click(function() {
 	    console.log(authData.facebook.displayName);
 	    var userName = authData.facebook.displayName;
 	    var userImage = authData.facebook.profileImageURL;
-	    var userObject = {
+	    userObject = {
 	    	
 	    	"user_name":userName,
 	    	"user_image": userImage
