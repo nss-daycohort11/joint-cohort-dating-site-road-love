@@ -10,7 +10,16 @@ body {
 	left: 0;
 	margin: 0;
 	padding: 0 0 0 0;
+
 }
+
+#logo {
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0 0 0 0;
+}
+
 
 h1 {
   text-align: center;
@@ -18,8 +27,17 @@ h1 {
 }	
 
 .main-page-container{
+
+transition: display 1.5s;
+
 padding: 0 15px 0 15px;
+
 }
+
+#my-profile{
+ animation: fadeIn 1s;
+}
+
 
 button#facebook {
   border-color: #2d5073;
@@ -29,10 +47,13 @@ button#facebook {
   width: 100px; 
 }
 
+
 .hidemoreinfo {
 	display: none;
 }
 
+
  ul {
 	list-style-type: none;
 }
+

@@ -5,29 +5,55 @@ require.config({
     'lodash': '../lib/bower_components/lodash/lodash.min',
     'hbs': '../lib/bower_components/require-handlebars-plugin/hbs',
     'q': '../lib/bower_components/q/q',
-    'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min',
-    "firebase": "../lib/bower_components/firebase/firebase",
+    'firebase': '../lib/bower_components/firebase/firebase',
+    'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min'
   },
   shim: {
-    'bootstrap': ['jquery']
-  },
-  "firebase": {
-    exports: "Firebase"
-    } 
+    'bootstrap': ['jquery'],
+    'firebase': {
+      exports: 'Firebase'
+    }
+  }
 });
 
 require(
-  ["dependencies", "login"], 
-  function(_$_, login) {
+  ["dependencies", "firebase", "login", "add-favorite", "get-templates", "load-profile", "adtnlinfo"], 
+  function(dependencies, firebase,login, addFavorite, templates, profile, adtnlinfo) {
 
-    /*
-      You can choose to use the REST methods to interact with
-      Firebase, or you can use the Firebase API with event
-      listeners. It's completely up to each team.
-
-      If you choose the former, I created two boilerplate modules
-      named `potential-mates.js`, and `add-favorite.js`.
-     */
+     // Import Firebase user object
+var importUserArray = [];
+var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
     
-  }
-);
+     // Take snapshot of firebase object
+  myFirebaseRef.child("users").once("value", function(snapshot) {
+    var users = snapshot.val();
+    
+     // Create array of objects
+    importUserArray = [];
+        for (var key in users) {
+            var userWithId = users[key];
+            userWithId.key = key;
+            importUserArray[importUserArray.length] = userWithId;
+          }
+          console.log("importUserArray", importUserArray);
+    
+     // Pass to HBS
+    var readyTemplate = templates.landingTmpl({ users: importUserArray });
+    
+    $(".grid").html(readyTemplate);
+    
+
+
+
+
+
+    // Create copy of original array for click back to main screen.
+    // originalUserArray = importUserArray.slice();
+    
+     // Create variable to store "modifiedUserObject"
+
+     // Create editted JSON file
+
+     // Flash update back to Firebase
+});
+});

@@ -5,7 +5,7 @@ define(function(require) {
   var f = require("firebase");
 
   var adduser = require("adduser")
-console.log("yep");
+
 
 // Auth with facebook
 $("#facebook").click(function() {
@@ -23,9 +23,11 @@ $("#facebook").click(function() {
 	    var userImage = authData.facebook.profileImageURL;
 	    // Adding name and image to userObject object
 	    var userObject = {
+
 	    	
 	    	"user_name":userName,
 	    	"user_image": userImage
+
 
   		};
   		console.log("userObject", userObject);
@@ -45,8 +47,4 @@ $("#facebook").click(function() {
 });
 });
 });
-
-
-
-
 

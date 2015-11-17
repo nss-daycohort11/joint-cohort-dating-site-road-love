@@ -1,14 +1,11 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Road Love</title>
-
   <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
-
 <body>
 <header>
 	<nav class="navbar-fixed-top navbar navbar-default">
@@ -23,7 +20,6 @@
       </button>
       <img class="navbar-brand" href="#" id="logo" alt="brand" src="images/logo.png" width= "56" height="50">
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <!-- <ul class="nav navbar-nav">
@@ -49,7 +45,10 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Edit My Profile</a></li>
+        <li><button type="button" class="btn btn-default navbar-btn" id="profile-edit">Edit My Profile</a></li>
+        <ul class="nav navbar-nav navbar-right">
+        <li><button type="button" class="btn btn-default navbar-btn" style="display:none" id="see-the-world">See the World</a></li>
+      
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -65,29 +64,29 @@
   </div>
   <!-- .container-fluid -->
 </nav>
-
-<div id="main-page">
-	<div class="row main-page-container">
-	  <div class="col-md-2">.col-md-2</div>
-	  <div class="col-md-2">.col-md-2</div>
-	  <div class="col-md-2">.col-md-2</div>
-	  <div class="col-md-2">.col-md-2</div>
-	  <div class="col-md-2">.col-md-2</div>
-	  <div class="col-md-2">.col-md-2</div>
+</header>
+<div id="main-page-container">
+	<div class="row grid" id= "main-page">
+		  <div class="col-md-2">.col-md-2</div>
+		  <div class="col-md-2">.col-md-2</div>
+		  <div class="col-md-2">.col-md-2</div>
+		  <div class="col-md-2">.col-md-2</div>
+		  <div class="col-md-2">.col-md-2</div>
+		  <div class="col-md-2">.col-md-2</div>
 	</div>
-</div>
-<div class="profile" id="my-profile" style="display:none">
-	<div class="row">
-	  <div class="col-md-5">.col-md-5</div>
-	  <div class="col-md-4">.col-md-4</div>
-	  <div class="col-md-3">.col-md-3</div>
+	<div class="profile" id="my-profile" style="display:none">
+		<div class="row">
+		  <div class="col-md-5">.col-md-5</div>
+		  <div class="col-md-4">.col-md-4</div>
+		  <div class="col-md-3">.col-md-3</div>
+		</div>
 	</div>
-</div>
-<div class="profile" id="other-profile" style="display:none">
-	<div class="row">
-	  <div class="col-md-5">.col-md-5</div>
-	  <div class="col-md-4">.col-md-4</div>
-	  <div class="col-md-3">.col-md-3</div>
+	<div class="profile" id="other-profile" style="display:none">
+		<div class="row">
+		  <div class="col-md-5">.col-md-5</div>
+		  <div class="col-md-4">.col-md-4</div>
+		  <div class="col-md-3">.col-md-3</div>
+		</div>
 	</div>
 </div>
 </header>
@@ -118,20 +117,20 @@
 			<li>What is your home city?</li>
 			<li><input type="text" id="city" placeholder="Enter city here"></input></li>
 			<li>What is your home zipcode?</li>
-			<li><input type="text" id="age" placeholder="Enter zipcode here"></input></li>
+			<li><input type="text" id="zip" placeholder="Enter zipcode here"></input></li>
 			<li>What is your current RV?</li>
-			<li><input type="text" id="age" placeholder="Enter RV here"></input></li>
+			<li><input type="text" id="rv" placeholder="Enter RV here"></input></li>
 		</ul>
 		<ul>	
 			<li><p>Please select your sex.</p></li>
-			<select>
+			<select id="myselect">
 				<option value="female">Female</option>
 				<option value="male">Male</option>
 			</select>
 		</ul>	
 		<ul>			
 			<li>Tell the other users a little more about yourself!!!<li>
-			<li><input type="text" id="age"></input></li>
+			<li><input type="text" id="bio"></input></li>
 		</ul>
       </div>
       <div class="modal-footer">
@@ -141,8 +140,7 @@
     </div>
   </div>
 </div>
-
-<script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
-
+<div class="hidemoreinfo moreinfo">
+  <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
 </body>
 </html>

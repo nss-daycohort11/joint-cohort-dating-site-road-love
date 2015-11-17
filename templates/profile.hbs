@@ -1,0 +1,33 @@
+{{#each users}}
+  <div class = "row">
+    <div class= "col-md-5 image-container">
+      <div>
+       <img src={{user_image}}>
+      </div>
+    </div>
+    <div class= "col-md-4 profile-container">
+      <div class="name-box">
+        Name: {{user_name}}
+      </div>
+      <div class="age-box">
+        Age: {{age}}
+      </div>
+      <div class="gender-box">
+        Gender: {{gender}}
+       </div> 
+      <div class= "bio-box">
+        Bio: {{bio}}
+      </div>
+      <div class="geo-box">
+        Location: {{homelocation.city}}, {{homelocation.state}}
+      </div>
+      <div class="rv-box">
+        RV: {{rv}}
+      </div>
+    </div>  
+    <div class= "col-md-3">
+      {{!-- Like button goes here --}}
+      {{!-- Favorite button goes here --}}
+    </div>
+  </div>
+{{/each}}
