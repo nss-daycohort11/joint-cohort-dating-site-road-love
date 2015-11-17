@@ -39,7 +39,7 @@ define(function(require) {
           });    
     });
 
-    $("#like").click(function(likeUserData) {
+  $(document).on('click', '#like', function(likeUserData){
     console.log("like click");
       usersRef.child(userKey + "/likes/").push(likeUserData = true);
     });
