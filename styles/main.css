@@ -13,7 +13,10 @@ h1 {
   color: purple; }
 
 .main-page-container {
+<<<<<<< HEAD
   transition: display 1.5s; 
+=======
+>>>>>>> like_feature_RLM
   padding: 0 15px 0 15px; }
 
 button#facebook {
@@ -23,6 +26,7 @@ button#facebook {
   height: 100px;
   width: 100px; }
 
+<<<<<<< HEAD
 
 
 .hidemoreinfo {
@@ -31,4 +35,9 @@ button#facebook {
 ul {
   list-style-type: none; }
 
+=======
+.hidemoreinfo {
+  display: none; }
+
+>>>>>>> like_feature_RLM
 /*# sourceMappingURL=main.css.map */
