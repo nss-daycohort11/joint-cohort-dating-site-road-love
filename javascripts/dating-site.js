@@ -17,8 +17,8 @@ require.config({
 });
 
 require(
-  ["dependencies", "firebase", "login", "add-favorite"], 
-  function(dependencies, login, addFavorite) {
+  ["dependencies", "firebase", "login", "add-favorite", "load-profile", "get-templates"], 
+  function(dependencies, login, addFavorite, loadProf, getTmpl) {
 
     /*
       You can choose to use the REST methods to interact with
