@@ -28,4 +28,7 @@ button#facebook {
 .hidemoreinfo {
   display: none; }
 
+ul {
+  list-style-type: none; }
+
 /*# sourceMappingURL=main.css.map */
