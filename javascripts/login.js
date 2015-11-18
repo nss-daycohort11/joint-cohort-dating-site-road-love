@@ -16,7 +16,9 @@ define(function(require) {
 
   $("#facebook").click(function() {
     console.log("click");
+    // Ref to firebase
     var ref = new Firebase("https://roadlove.firebaseio.com/");
+    // Getting auth from Facebook
     ref.authWithOAuthPopup("facebook", function(error, authData) {
       if(authData){
         auth.getUid();
