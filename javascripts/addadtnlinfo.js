@@ -7,7 +7,7 @@
 		 	 var deferred = Q.defer();
 		 	 //make ajax call
 			 $.ajax({
-			 	url: "https://roadlove.firebaseio.com/users.json",
+			 	url: "https://roadlove.firebaseio.com/users/" + userkey + ".json",
 		  		method:"POST",
 		  		data: JSON.stringify(adtnlInfoObject)
 		  		// XHR was successful
