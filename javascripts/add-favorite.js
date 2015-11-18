@@ -33,12 +33,14 @@ define(function(require) {
           }else{
             // console.log("User does not exist");
           }
-        }
-          likesRef.on('value', function (snapshot) {
-            var usersLikes = snapshot.val();
-            console.log("usersLikes", usersLikes);
-          });    
+        }   
     });
+
+    likesRef.on('value', function (snapshot) {
+      var usersLikes = snapshot.val();
+      console.log("usersLikes", usersLikes);
+    }); 
+      
     var likedKey = {};
 
     console.log("hello there");

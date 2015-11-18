@@ -19,49 +19,49 @@ require.config({
 require(
 
   ["dependencies", "firebase", "login", "add-favorite", "get-templates", "load-profile", "adduser", "auth-storage"], 
-  function(dependencies, firebase,login, addFavorite, templates, profile,adduser,auth) {
+  function(dependencies, firebase, login, addFavorite, templates, profile, adduser, auth) {
 
      // Import Firebase user object
-var importUserArray = [];
-var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
-var userAuth = myFirebaseRef.getAuth();
+  var importUserArray = [];
+  var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
+  var userAuth = myFirebaseRef.getAuth();
     
      // Take snapshot of firebase object
   myFirebaseRef.child("users").once("value", function(snapshot) {
     var users = snapshot.val();
     
-     // Create array of objects
+       // Create array of objects
     importUserArray = [];
 
-        for (var key in users) {
-            var userWithId = users[key];
-            userWithId.key = key;
-            importUserArray[importUserArray.length] = userWithId;
-            if(userWithId.user_uid === userAuth.uid){
-            console.log("user exists");
-            auth.setKey(key);
-            var friendKey = auth.getKey();
-          }
-            // console.log("userWithId", userWithId);
-          }
-          console.log("importUserArray", importUserArray);
-          
-      
-       // Prep object to be passed into hbs in case of edits
-      allUsersObject = { users: importUserArray };
-      var readyTemplate = templates.landingTmpl({ users: importUserArray });
-   
-   $(".grid").html(readyTemplate);
-      // Create copy of original array for click back to main screen.
+    for (var key in users) {
+        var userWithId = users[key];
+        userWithId.key = key;
+        importUserArray[importUserArray.length] = userWithId;
+
+        if(userWithId.user_uid === userAuth.uid){
+          console.log("user exists");
+          auth.setKey(key);
+          var friendKey = auth.getKey();
+        }
+        // console.log("userWithId", userWithId);
+    }
+      console.log("importUserArray", importUserArray);
+            
+        
+     // Prep object to be passed into hbs in case of edits
+    allUsersObject = { users: importUserArray };
+    var readyTemplate = templates.landingTmpl({ users: importUserArray });
+     
+    $(".grid").html(readyTemplate);
+        // Create copy of original array for click back to main screen.
       originalUserArray = importUserArray.slice();
-      
-       // Create variable to store "modifiedUserObject"
+        
+         // Create variable to store "modifiedUserObject"
 
-       // Create editted JSON file
+         // Create editted JSON file
 
-       // Flash update back to Firebase
+         // Flash update back to Firebase
 
-     });
-      
+  }); 
 });
 
