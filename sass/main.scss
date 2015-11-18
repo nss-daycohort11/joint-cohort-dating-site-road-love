@@ -1,22 +1,6 @@
-
 body {
-   background-color: navajowhite;
-   padding-top: 70px; 
-<<<<<<< HEAD
-
-=======
->>>>>>> like_feature_RLM
-}
-
-#logo {
-	top: 0;
-	left: 0;
-	margin: 0;
-	padding: 0 0 0 0;
-<<<<<<< HEAD
-
-=======
->>>>>>> like_feature_RLM
+	background-color: navajowhite;
+	padding-top: 70px; 
 }
 
 #logo {
@@ -25,7 +9,6 @@ body {
 	margin: 0;
 	padding: 0 0 0 0;
 }
-
 
 h1 {
   text-align: center;
@@ -33,44 +16,56 @@ h1 {
 }	
 
 .main-page-container{
+	transition: display 1.5s;
+	padding: 0 15px 0 15px;
+}
 
-transition: display 1.5s;
-
-padding: 0 15px 0 15px;
-
+.profile_box{
+    margin: auto 5%;
 }
 
 #my-profile{
- animation: fadeIn 1s;
+	animation: fadeIn 1s;
 }
 
-<<<<<<< HEAD
-=======
-.main-page-container{
-padding: 0 15px 0 15px;
+.center {
+    margin-left: 35%;
+    margin-right:  45%;
 }
->>>>>>> like_feature_RLM
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
+ div.social-wrap button {
+    padding-right: 45px;
+    height: 35px;
+    background: none;
+    border: none;
+    display: block;
+    background-size: 35px 35px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    color: white;
+    font-family:"Merriweather Sans", sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: 205px;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px gray;
+    text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+}
 
 button#facebook {
-  border-color: #2d5073;
-  background-color: #3b5998;
-  background-image: url(http://i.stack.imgur.com/pZzc4.png);
-  height: 100px;
-  width: 100px; 
+    border-color: #2d5073;
+    background-color: #3b5998;
+    background-image: url(http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png);
 }
-
-<<<<<<< HEAD
 
 .hidemoreinfo {
 	display: none;
 }
 
- ul {
+ul {
 	list-style-type: none;
 }
-
-=======
-.hidemoreinfo {
-	display: none;
-}
->>>>>>> like_feature_RLM

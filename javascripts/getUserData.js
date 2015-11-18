@@ -7,7 +7,7 @@ define(["q"],
       .done(function(data){
       	deferred.resolve(data);
       });
-        myFirebaseRef.child("users").on("value", function(snapshot) {
+        myFirebaseRef.child("users/" + auth.getUid).on("value", function(snapshot) {
         var users = snapshot.val();
         });
       return deferred.promise;

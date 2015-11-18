@@ -26,4 +26,4 @@ define(["jquery"],
        $("#profile-edit").click(myProfileView);
        $("#see-the-world").click(viewPeopleView);
        $(".others-profile").click(otherProfileView);    
-  })
+  });

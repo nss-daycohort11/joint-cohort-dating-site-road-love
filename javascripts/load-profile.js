@@ -2,29 +2,38 @@ define(function (require){
   var firebase = require("firebase");
   var $ = require("jquery");
   var templates = require("get-templates");
-
-  console.log("templates", templates);
+  var auth = require("auth-storage");
+  var getUserData = require("getUserData");
 
   var myFirebaseRef = new Firebase("https://roadlove.firebaseio.com/");
+  var userAuth = myFirebaseRef.getAuth();
+    
+    // Take snapshot of firebase object
+  myFirebaseRef.child("users").once("value", function(snapshot) {
+  var users = snapshot.val();
+    
+    // Create array of objects
+    importUserArray = [];
 
-    // Listen for when any changes occur to the "users" key
-  myFirebaseRef.child("users").on("value", function(snapshot) {
-    var users = snapshot.val();
-    console.log("users", users); 
-
-
-// I think this is the code snippet you need here...
-    var arrayOfObjects = [];
     for (var key in users) {
-          var userWithId = users[key];
-          userWithId.key = key;
-          arrayOfObjects[arrayOfObjects.length] = userWithId;
-    };
+      var userWithId = users[key];
+      userWithId.key = key;
+      importUserArray[importUserArray.length] = userWithId;
 
-    var populatedTemplate = templates.profileTmpl({ users: arrayOfObjects });
+      if(userWithId.user_uid === userAuth.uid){
+        console.log("user exists");
+        auth.setKey(key);
+      }
+    }
+    var profileRef = new Firebase("https://roadlove.firebaseio.com/users/" + auth.getKey());
+    profileRef.on('value', function(snapshot){
+      var userProfile = snapshot.val();
+      console.log("userProfile", userProfile);
 
-      //Insert the DOM into the proper element
-    $("#my-profile").html(populatedTemplate);
+      var populatedTemplate = templates.profileTmpl({ user: userProfile });
       
-  });  
+      //Insert the DOM into the proper element
+      $("#my-profile").html(populatedTemplate);
+    });
+  });
 });

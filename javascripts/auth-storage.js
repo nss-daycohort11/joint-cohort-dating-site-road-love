@@ -1,5 +1,6 @@
 define(function(require){
   var uid = null;
+  var uKey = null;
 
   return {
     getUid: function() {
@@ -15,7 +16,7 @@ define(function(require){
       return uKey;
     },
     setKey: function(newKey){
-      console.log("setting user id to ", newKey);
+      console.log("setting user key to ", newKey);
       uKey = newKey;
     }
   };
