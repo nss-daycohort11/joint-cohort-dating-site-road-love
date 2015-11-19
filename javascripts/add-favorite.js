@@ -2,7 +2,7 @@ define(function(require) {
   var q = require("q");
   var firebase = require("firebase");
   var auth = require("auth-storage");
-
+  var $ = require("jquery");
   var usersRef = new Firebase("https://roadlove.firebaseio.com/users/");
   var userAuth = usersRef.getAuth();
 
@@ -12,7 +12,7 @@ define(function(require) {
   var usersArray = [];
   var ref = new Firebase("https://roadlove.firebaseio.com");
 
-  ref.child("users").on("value", function(snapshot) {
+  ref.child("users").once("value", function(snapshot) {
     var users = snapshot.val();
     console.log("users", users);
 

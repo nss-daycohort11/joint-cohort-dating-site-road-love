@@ -16,7 +16,7 @@ require.config({
   }
 });
 
-require(
+define(
 
   ["dependencies", "firebase", "login", "add-favorite", "get-templates", "load-profile", "adduser", "auth-storage", "addtnlinfo"], 
   function(dependencies, firebase, login, addFavorite, templates, profile, adduser, auth, additionalinfo) {

@@ -31,7 +31,7 @@ $("#save").click(function() {
 		"gender": gender,
 		"bio": bio 
 
-	}
+	};
 	console.log("adtnlInfoObject", adtnlInfoObject);
   		// Sending userObject to Firebase via promises
   		addadtnlinfo(adtnlInfoObject)

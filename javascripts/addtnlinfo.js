@@ -7,13 +7,14 @@ define(function(require) {
 
   // $(document).on('click', '#save', function(){
 $("#save").click(function() {
-	var userKey = auth.getUid();
+	var userKey = auth.getKey();
+	
 	console.log("userkey", userKey );
   	// var userRef = new Firebase("https://roadlove.firebaseio.com/users/" + userKey );
   	var userRef = new Firebase("https://roadlove.firebaseio.com/users/" + userKey);
 
 
-  	console.log("userRef", userRef);
+  	
 
 	console.log("save click");
 	var age = $("#age").val();
