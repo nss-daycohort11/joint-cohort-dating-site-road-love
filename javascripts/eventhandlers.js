@@ -23,7 +23,12 @@ define(["jquery"],
           $("#profile-edit").show();        
        }
 
+       function closeModal (){
+          $(".show").remove();
+       }
+
        $("#profile-edit").click(myProfileView);
        $("#see-the-world").click(viewPeopleView);
        $(".others-profile").click(otherProfileView);    
+       $(".close").click(closeModal);
   });

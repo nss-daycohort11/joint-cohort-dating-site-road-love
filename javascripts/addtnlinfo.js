@@ -8,7 +8,10 @@ define(function(require) {
   // $(document).on('click', '#save', function(){
 $("#save").click(function() {
 	var userKey = auth.getUid();
+	console.log("userkey", userKey );
+  	// var userRef = new Firebase("https://roadlove.firebaseio.com/users/" + userKey );
   	var userRef = new Firebase("https://roadlove.firebaseio.com/users/" + userKey);
+
 
   	console.log("userRef", userRef);
 
@@ -30,13 +33,15 @@ $("#save").click(function() {
 
 	userRef.update({
 
-		"age": age,
-		"homelocation.city": city,
-		"homelocation.state": state,
-		"zip": zip,
-		"rv": rv,
-		"gender": gender,
-		"bio": bio 
+		age: age,
+		homelocation: {
+			city: city,
+			state: state
+		},
+		zip: zip,
+		rv: rv,
+		gender: gender,
+		bio: bio 
 
 	});
 

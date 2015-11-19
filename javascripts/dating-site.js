@@ -18,8 +18,8 @@ require.config({
 
 require(
 
-  ["dependencies", "firebase", "login", "add-favorite", "get-templates", "load-profile", "adduser", "auth-storage"], 
-  function(dependencies, firebase, login, addFavorite, templates, profile, adduser, auth) {
+  ["dependencies", "firebase", "login", "add-favorite", "get-templates", "load-profile", "adduser", "auth-storage", "addtnlinfo"], 
+  function(dependencies, firebase, login, addFavorite, templates, profile, adduser, auth, additionalinfo) {
 
     // Import Firebase user object
   var importUserArray = [];

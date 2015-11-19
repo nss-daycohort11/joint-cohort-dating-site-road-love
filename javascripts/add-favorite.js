@@ -31,7 +31,7 @@ define(function(require) {
       }   
   });
 
-  likesRef.on('value', function (snapshot) {
+  likesRef.once('value', function (snapshot) {
     var usersLikes = snapshot.val();
     console.log("usersLikes", usersLikes);
   }); 

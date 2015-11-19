@@ -3,7 +3,7 @@
 
  	return function(userObject){
 
-			//set deffered object
+console.log("adduser fired" );			//set deffered object
 	 	 var deferred = Q.defer();
 	 	 //make ajax call
 		 $.ajax({

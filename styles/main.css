@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
 body {
-  background-color: navajowhite;
+  background-color: white;
   padding-top: 70px; }
 
 #logo {
@@ -58,5 +58,9 @@ button#facebook {
 
 ul {
   list-style-type: none; }
+
+.profile_box {
+  border-style: solid;
+  border-width: 1px; }
 
 /*# sourceMappingURL=main.css.map */
