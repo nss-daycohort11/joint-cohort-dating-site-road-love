@@ -1,6 +1,7 @@
 body {
 	background-color: white;
 	padding-top: 70px; 
+
 }
 
 #logo {
@@ -28,10 +29,17 @@ h1 {
 	animation: fadeIn 1s;
 }
 
+<<<<<<< HEAD
 .center {
     margin-left: 35%;
     margin-right:  45%;
 }
+
+.main-page-container{
+padding: 0 15px 0 15px;
+}
+
+
 
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
  div.social-wrap button {
@@ -56,11 +64,15 @@ h1 {
     text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
 }
 
+
 button#facebook {
     border-color: #2d5073;
     background-color: #3b5998;
     background-image: url(http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png);
 }
+
+
+
 
 .hidemoreinfo {
 	display: none;
@@ -69,6 +81,7 @@ button#facebook {
 ul {
 	list-style-type: none;
 }
+
 
 .profile_box{
 border-style: solid;

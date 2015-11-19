@@ -1,66 +1,56 @@
-@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
-body {
-  background-color: white;
-  padding-top: 70px; }
+/*
+Error: Invalid CSS after "": expected selector, was "<<<<<<< HEAD"
+        on line 32 of ../sass/main.scss
 
-#logo {
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0 0 0 0; }
+27: 
+28: #my-profile{
+29: 	animation: fadeIn 1s;
+30: }
+31: 
+32: <<<<<<< HEAD
+33: .center {
+34:     margin-left: 35%;
+35:     margin-right:  45%;
+36: }
+37: 
 
-h1 {
-  text-align: center;
-  color: purple; }
-
-.main-page-container {
-  transition: display 1.5s;
-  padding: 0 15px 0 15px; }
-
-.profile_box {
-  margin: auto 5%; }
-
-#my-profile {
-  animation: fadeIn 1s; }
-
-.center {
-  margin-left: 35%;
-  margin-right: 45%; }
-
-div.social-wrap button {
-  padding-right: 45px;
-  height: 35px;
-  background: none;
-  border: none;
-  display: block;
-  background-size: 35px 35px;
-  background-position: right center;
-  background-repeat: no-repeat;
-  border-radius: 4px;
-  color: white;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 14px;
-  margin-bottom: 15px;
-  width: 205px;
-  border-bottom: 2px solid transparent;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-  box-shadow: 0 4px 2px -2px gray;
-  text-shadow: rgba(0, 0, 0, 0.5) -1px -1px 0; }
-
-button#facebook {
-  border-color: #2d5073;
-  background-color: #3b5998;
-  background-image: url(http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png); }
-
-.hidemoreinfo {
-  display: none; }
-
-ul {
-  list-style-type: none; }
-
-.profile_box {
-  border-style: solid;
-  border-width: 1px; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+../sass/main.scss:32
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:1163:in `expected'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/parser.rb:1077:in `expr!'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/scss/static_parser.rb:20:in `parse_selector'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:425:in `visit_rule'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:19:in `load'
+/usr/local/bin/sass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"\": expected selector, was \"<<<<<<< HEAD\"\A         on line 32 of ../sass/main.scss\A \A 27: \A 28: #my-profile{\A 29: 	animation: fadeIn 1s;\A 30: }\A 31: \A 32: <<<<<<< HEAD\A 33: .center {\A 34:     margin-left: 35%;\A 35:     margin-right:  45%;\A 36: }\A 37: "; }
